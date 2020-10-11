@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 public class GHappyTest {
 
-    @ParameterizedTest(name = "{0},{1}")
+    @ParameterizedTest(name = "{0}, {1}, {2}")
     @CsvSource({
             "'Equivalence Testing - happy case with 2 g's ',xxggxx,true",
             "'Equivalence Testing - UNhappy case with a g ?',xxgxx,false",
@@ -17,7 +17,7 @@ public class GHappyTest {
         Assertions.assertEquals(expectedResult,result);
     }
 
-    @ParameterizedTest(name = "{0}, {1}")
+    @ParameterizedTest(name = "{0}, {1}, {2}")
     @CsvSource({
             "'Boundaries Testing - happy case with only 2 g's ',gg,true",
             "'Boundaries Testing - UNhappy case with 1 g followd by another letter ?',gx,false",
