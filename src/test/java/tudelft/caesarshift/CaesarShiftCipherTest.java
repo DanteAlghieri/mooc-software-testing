@@ -55,5 +55,11 @@ public class CaesarShiftCipherTest {
         Assertions.assertEquals("invalid",result);
     }
 
-
+    @ParameterizedTest(name = "{0}, {1}, {2}")
+    @CsvSource({
+            "'Boundaries Testing - 360 Shift ', a, -3"})
+    public void BoundariesTesting360Shift(String outputText, String text, int shift){
+        String result = new CaesarShiftCipher().CaesarShiftCipher(text, shift);
+        Assertions.assertEquals("x",result);
+    }
 }
