@@ -17,4 +17,16 @@ public class CountLettersTest {
         Assertions.assertEquals(1, words);
     }
 
+    @Test
+    public void lastWordhasAnX() {
+        int words = new CountLetters().count("cat|tar");
+        Assertions.assertEquals(1, words);
+    }
+
+    @Test
+    public void lastWordhasAnR() {
+        int words = new CountLetters().count("car|taxi");
+        Assertions.assertEquals(1, words);
+    }
+
 }
