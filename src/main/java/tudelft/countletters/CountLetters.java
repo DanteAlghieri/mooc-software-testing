@@ -12,8 +12,6 @@ public class CountLetters {
             }
 
             last = str.charAt(i);
-            System.out.print("  ");
-            System.out.print(last);
         }
 
         if(last == 'r' || last == 's')
